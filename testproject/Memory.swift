@@ -16,9 +16,9 @@ class Memory {
     
     func chooseCard(at index: Int) {
         if !cards[index].isMatched {
-            if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
+        if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 // check if cards match
-                if cards[matchIndex].identifier == cards[index].identifier {
+        if cards[matchIndex].identifier == cards[index].identifier {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
@@ -27,7 +27,7 @@ class Memory {
             } else {
                 // either no or 2 cards are face up
                 for flipDownIndex in cards.indices {
-                    cards[flipDownIndex].isFaceUp = false
+        cards[flipDownIndex].isFaceUp = false
                 }
                 cards[index].isFaceUp = true
                 indexOfOneAndOnlyFaceUpCard = index
