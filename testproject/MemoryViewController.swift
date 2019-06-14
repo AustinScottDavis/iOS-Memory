@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MemoryViewController: UIViewController {
   
     private lazy var game = Memory(numberOfPairsOfCards: numberOfPairsOfCards)
     
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     private func updateFlipCountLabel() {
         let attributes: [NSAttributedString.Key: Any] = [
             .strokeWidth : 5.0,
-            .strokeColor : #colorLiteral(red: 0.9858418107, green: 0.60793221, blue: 0, alpha: 1)
+            .strokeColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         ]
         let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
         flipCountLabel.attributedText = attributedString
@@ -48,16 +48,26 @@ class ViewController: UIViewController {
     }
     
     func updateViewFromModel() {
-        for index in cardButtons.indices {
-            let button = cardButtons[index]
-            let card = game.cards[index]
-            if card.isFaceUp {
-                button.setTitle(emoji(for: card), for: UIControl.State.normal)
-                button.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
-            } else {
-                button.setTitle("", for: UIControl.State.normal)
-                button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.9858418107, green: 0.60793221, blue: 0, alpha: 0) : #colorLiteral(red: 0.9858418107, green: 0.60793221, blue: 0, alpha: 1)
+        if cardButtons != nil {
+            for index in cardButtons.indices {
+                let button = cardButtons[index]
+                let card = game.cards[index]
+                if card.isFaceUp {
+                    button.setTitle(emoji(for: card), for: UIControl.State.normal)
+                    button.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                } else {
+                    button.setTitle("", for: UIControl.State.normal)
+                    button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.9858418107, green: 0.60793221, blue: 0, alpha: 0) : #colorLiteral(red: 0.6205483079, green: 0.797450006, blue: 1, alpha: 1)
+                }
             }
+        }
+    }
+    
+    var theme: String? {
+        didSet {
+            emojiChoices = theme ?? ""
+            emoji = [:]
+            updateViewFromModel()
         }
     }
     

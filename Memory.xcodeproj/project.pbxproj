@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4545DEA72294E91D00FC2D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545DEA62294E91D00FC2D7E /* AppDelegate.swift */; };
-		4545DEA92294E91D00FC2D7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545DEA82294E91D00FC2D7E /* ViewController.swift */; };
+		4545DEA92294E91D00FC2D7E /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545DEA82294E91D00FC2D7E /* MemoryViewController.swift */; };
 		4545DEAC2294E91D00FC2D7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4545DEAA2294E91D00FC2D7E /* Main.storyboard */; };
 		4545DEAE2294E91E00FC2D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4545DEAD2294E91E00FC2D7E /* Assets.xcassets */; };
 		4545DEB12294E91E00FC2D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4545DEAF2294E91E00FC2D7E /* LaunchScreen.storyboard */; };
 		4545DEBC2294E91F00FC2D7E /* testprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545DEBB2294E91F00FC2D7E /* testprojectTests.swift */; };
 		4545DEC72294E91F00FC2D7E /* testprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4545DEC62294E91F00FC2D7E /* testprojectUITests.swift */; };
+		4555518E22B3641200E8DFD3 /* MemoryThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555518D22B3641200E8DFD3 /* MemoryThemeChooserViewController.swift */; };
 		457F292B229664F900DC597A /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457F292A229664F900DC597A /* Memory.swift */; };
 		457F292D2296663F00DC597A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457F292C2296663F00DC597A /* Card.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +39,7 @@
 /* Begin PBXFileReference section */
 		4545DEA32294E91D00FC2D7E /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4545DEA62294E91D00FC2D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4545DEA82294E91D00FC2D7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4545DEA82294E91D00FC2D7E /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		4545DEAB2294E91D00FC2D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4545DEAD2294E91E00FC2D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4545DEB02294E91E00FC2D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		4545DEC22294E91F00FC2D7E /* MemoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4545DEC62294E91F00FC2D7E /* testprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testprojectUITests.swift; sourceTree = "<group>"; };
 		4545DEC82294E91F00FC2D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4555518D22B3641200E8DFD3 /* MemoryThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryThemeChooserViewController.swift; sourceTree = "<group>"; };
 		457F292A229664F900DC597A /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		457F292C2296663F00DC597A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,8 +103,9 @@
 		4545DEA52294E91D00FC2D7E /* testproject */ = {
 			isa = PBXGroup;
 			children = (
+				4555518D22B3641200E8DFD3 /* MemoryThemeChooserViewController.swift */,
 				4545DEA62294E91D00FC2D7E /* AppDelegate.swift */,
-				4545DEA82294E91D00FC2D7E /* ViewController.swift */,
+				4545DEA82294E91D00FC2D7E /* MemoryViewController.swift */,
 				4545DEAA2294E91D00FC2D7E /* Main.storyboard */,
 				457F292A229664F900DC597A /* Memory.swift */,
 				457F292C2296663F00DC597A /* Card.swift */,
@@ -263,7 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				457F292B229664F900DC597A /* Memory.swift in Sources */,
-				4545DEA92294E91D00FC2D7E /* ViewController.swift in Sources */,
+				4555518E22B3641200E8DFD3 /* MemoryThemeChooserViewController.swift in Sources */,
+				4545DEA92294E91D00FC2D7E /* MemoryViewController.swift in Sources */,
 				4545DEA72294E91D00FC2D7E /* AppDelegate.swift in Sources */,
 				457F292D2296663F00DC597A /* Card.swift in Sources */,
 			);
